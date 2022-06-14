@@ -4,8 +4,7 @@ Library    SeleniumLibrary
 *** Variables ***
 ${LOGIN URL}    https://teveclub.hu/
 ${BROWSER}      chrome
-${tevenev}  Patás Nyunyu
-${hivojel}  gyereideakurvaanyad
+
 
 *** Keywords ***
 Open my Browser
@@ -17,8 +16,9 @@ Close Browsers
 
 
 loginToApplication
-    input text  name:tevenev    ${tevenev}
-    input text  name:pass   ${hivojel}
+    [Arguments]    ${appusername}  ${apppassword}
+    input text  name:tevenev    ${appusername}
+    input text  name:pass   ${apppassword}
     click element   //input[contains(@type,'image')]
 
 Learning

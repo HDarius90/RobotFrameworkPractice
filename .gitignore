@@ -1,0 +1,14 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+/TestData/LoginDataTTC.xlsx
+.idea
+debug.log
+Lib/__pycache__/
+Lib/BNT/__pycache__/
+Lib/Common/__pycache__/
+Resource/__pycache__/
+Resource/pageObjects/__pycache__/
+/venv
+pabot_results
+.pabotsuitenames
