@@ -3,6 +3,7 @@
 /workspace.xml
 /TestData/LoginDataTTC.xlsx
 .idea
+/.idea
 debug.log
 Lib/__pycache__/
 Lib/BNT/__pycache__/
