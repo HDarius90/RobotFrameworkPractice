@@ -1,7 +1,7 @@
 # Default ignored files
 /shelf/
 /workspace.xml
-/TestData/LoginDataTTC.xlsx
+/TestData/Login_data.robot
 .idea
 /.idea
 debug.log

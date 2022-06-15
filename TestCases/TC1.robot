@@ -1,13 +1,14 @@
 *** Settings ***
 Library  SeleniumLibrary
 Resource    ../Resources/login_resources_TC1.robot
-Library    DataDriver   ../TestData/LoginDataTTC.xlsx  sheet_name=Sheet1
+Resource    ../TestData/Login_data.robot
 Suite Setup    Open my Browser
 Suite Teardown    Close Browsers
-Test Template    LoginWithExcel
+
 
 *** Test Cases ***
-LoginWithDataFromExcel    ${username}     ${password}
+Teve visit
+    LoginWithData    ${username}     ${password}
 
 
 TodoTest
@@ -16,11 +17,9 @@ TodoTest
 
 
 *** Keywords ***
-LoginWithExcel
+LoginWithData
     [Arguments]    ${username}  ${password}
     set selenium speed    1
     loginToApplication    ${username}   ${password}
-
-
 
 
