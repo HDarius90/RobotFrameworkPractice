@@ -13,3 +13,7 @@ Resource/pageObjects/__pycache__/
 /venv
 pabot_results
 .pabotsuitenames
+log.html
+output.xml
+report.html
+selenium-screenshot*.png

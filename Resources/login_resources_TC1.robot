@@ -23,8 +23,15 @@ loginToApplication
 
 Learning
     click element    //a[@href='/tanit.pet']
+
+    ${lessonPresent}=  page should contain    Válaszd ki, hogy mit tanuljon a tevéd:
+    IF    ${lessonPresent}
+        select from list by index    xpath://*[@id="content ize"]/tbody/tr/td/table/tbody/tr[1]/td/font/b/div/form/div[1]/select    0
+        click element    //*[@id="content ize"]/tbody/tr/td/table/tbody/tr[1]/td/font/b/div/form/div[2]/input
+    ELSE
     click element    //input[contains(@value,'Tanulj teve!')]
     click element    //area[contains(@shape,'poly')]
+    END
 
 Feeding
     ${countFood}=    get element count    xpath://select[contains(@name,'kaja')]/option
