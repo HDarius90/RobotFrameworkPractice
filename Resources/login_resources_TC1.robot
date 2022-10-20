@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${LOGIN URL}    https://teveclub.hu/
-${BROWSER}      chrome
+${BROWSER}      headlesschrome
 
 
 *** Keywords ***
@@ -23,13 +23,23 @@ loginToApplication
 
 Learning
     click element    //a[@href='/tanit.pet']
-    click element    //input[contains(@value,'Tanulj teve!')]
-    click element    //area[contains(@shape,'poly')]
+
+    ${lessonPresent}=  Run Keyword And Return Status    page should contain    Válaszd ki, hogy mit tanuljon a tevéd:
+    IF    ${lessonPresent}
+        select from list by index    xpath://*[@id="content ize"]/tbody/tr/td/table/tbody/tr[1]/td/font/b/div/form/div[1]/select    0
+        click element    //*[@id="content ize"]/tbody/tr/td/table/tbody/tr[1]/td/font/b/div/form/div[2]/input
+    ELSE
+        click element    //input[contains(@value,'Tanulj teve!')]
+        click element    //area[contains(@shape,'poly')]
+    END
 
 Feeding
-    ${countFood}=    get element count    xpath://select[contains(@name,'kaja')]/option
-    ${countDrink}=    get element count    xpath://select[contains(@name,'pia')]/option
+    ${feedable}=    run keyword and return status    element should be visible    //input[contains(@value,'Mehet!')]
     execute javascript    window.scrollTo(0,document.body.scrollHeight)
-    select from list by value    kaja   ${countFood}
-    select from list by value    pia   ${countDrink}
-    click element    //input[contains(@value,'Mehet!')]
+    IF    ${feedable}
+        ${countFood}=    get element count    xpath://select[contains(@name,'kaja')]/option
+        ${countDrink}=    get element count    xpath://select[contains(@name,'pia')]/option
+        select from list by value    kaja   ${countFood}
+        select from list by value    pia   ${countDrink}
+        click element    //input[contains(@value,'Mehet!')]
+    END

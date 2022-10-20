@@ -19,7 +19,6 @@ TodoTest
 *** Keywords ***
 LoginWithData
     [Arguments]    ${username}  ${password}
-    set selenium speed    1
     loginToApplication    ${username}   ${password}
 
 
