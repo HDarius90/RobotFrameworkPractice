@@ -9,8 +9,9 @@ ${url}  http://127.0.0.1:5500/index.html?
 ANYAD
     open browser    ${url}  ${browser}
     maximize browser window
-    select from list by index    (//select[@class='match-result'])[1]     3
-    select from list by index    (//select[@class='match-result'])[2]     3
+    handle alert
+    #select from list by index    (//select[@class='match-result'])[1]     3
+    #select from list by index    (//select[@class='match-result'])[2]     3
     select from list by index    (//select[@class='match-result'])[3]     3
     select from list by index    (//select[@class='match-result'])[4]     3
     select from list by index    (//select[@class='match-result'])[5]     3

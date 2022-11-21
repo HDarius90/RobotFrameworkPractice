@@ -1,194 +1,357 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0 (Python 3.10.8 on win32)" generated="20221118 09:17:39.633" rpa="false" schemaversion="3">
-<suite id="s1" name="TC1" source="C:\Users\dhadjati\PycharmProjects\RobotFrameworkPractice\TestCases\TC1.robot">
-<kw name="Open my Browser" library="login_resources_TC1" type="SETUP">
+<robot generator="Robot 6.0 (Python 3.10.8 on win32)" generated="20221121 13:31:00.139" rpa="false" schemaversion="3">
+<suite id="s1" name="WC22" source="C:\Users\dhadjati\PycharmProjects\RobotFrameworkPractice\TestCases\WC22.robot">
+<test id="s1-t1" name="ANYAD" line="9">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${LOGIN URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221118 09:17:39.999" level="INFO">Opening browser 'headlesschrome' to base url 'https://teveclub.hu/'.</msg>
-<status status="PASS" starttime="20221118 09:17:39.999" endtime="20221118 09:17:45.006"/>
+<msg timestamp="20221121 13:31:00.417" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5500/index.html?'.</msg>
+<status status="PASS" starttime="20221121 13:31:00.416" endtime="20221121 13:31:02.355"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221118 09:17:45.006" endtime="20221118 09:17:45.124"/>
+<status status="PASS" starttime="20221121 13:31:02.356" endtime="20221121 13:31:02.482"/>
 </kw>
-<status status="PASS" starttime="20221118 09:17:39.999" endtime="20221118 09:17:45.124"/>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20221121 13:31:02.483" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20221121 13:31:02.483" endtime="20221121 13:31:03.508"/>
 </kw>
-<test id="s1-t1" name="Teve visit" line="10">
-<kw name="LoginWithData">
-<arg>${username}</arg>
-<arg>${password}</arg>
-<kw name="loginToApplication" library="login_resources_TC1">
-<arg>${username}</arg>
-<arg>${password}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:tevenev</arg>
-<arg>${appusername}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 09:17:45.126" level="INFO">Typing text 'Patás Nyunyu' into text field 'name:tevenev'.</msg>
-<status status="PASS" starttime="20221118 09:17:45.126" endtime="20221118 09:17:45.186"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:pass</arg>
-<arg>${apppassword}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 09:17:45.186" level="INFO">Typing text 'gyereideakurvaanyad' into text field 'name:pass'.</msg>
-<status status="PASS" starttime="20221118 09:17:45.186" endtime="20221118 09:17:45.257"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[contains(@type,'image')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 09:17:45.258" level="INFO">Clicking element '//input[contains(@type,'image')]'.</msg>
-<status status="PASS" starttime="20221118 09:17:45.257" endtime="20221118 09:17:46.300"/>
-</kw>
-<status status="PASS" starttime="20221118 09:17:45.125" endtime="20221118 09:17:46.300"/>
-</kw>
-<status status="PASS" starttime="20221118 09:17:45.125" endtime="20221118 09:17:46.301"/>
-</kw>
-<status status="PASS" starttime="20221118 09:17:45.125" endtime="20221118 09:17:46.301"/>
-</test>
-<test id="s1-t2" name="TodoTest" line="14">
-<kw name="Feeding" library="login_resources_TC1">
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${feedable}</var>
-<arg>element should be visible</arg>
-<arg>//input[contains(@value,'Mehet!')]</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//input[contains(@value,'Mehet!')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221118 09:17:46.372" level="INFO">Element '//input[contains(@value,'Mehet!')]' is displayed.</msg>
-<status status="PASS" starttime="20221118 09:17:46.303" endtime="20221118 09:17:46.372"/>
-</kw>
-<msg timestamp="20221118 09:17:46.372" level="INFO">${feedable} = True</msg>
-<status status="PASS" starttime="20221118 09:17:46.303" endtime="20221118 09:17:46.372"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221118 09:17:46.373" level="INFO">Executing JavaScript:
-window.scrollTo(0,document.body.scrollHeight)
-Without any arguments.</msg>
-<status status="PASS" starttime="20221118 09:17:46.372" endtime="20221118 09:17:46.377"/>
-</kw>
-<if>
-<branch type="IF" condition="${feedable}">
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${countFood}</var>
-<arg>xpath://select[contains(@name,'kaja')]/option</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20221118 09:17:46.387" level="INFO">${countFood} = 2</msg>
-<status status="PASS" starttime="20221118 09:17:46.378" endtime="20221118 09:17:46.387"/>
-</kw>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${countDrink}</var>
-<arg>xpath://select[contains(@name,'pia')]/option</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20221118 09:17:46.397" level="INFO">${countDrink} = 2</msg>
-<status status="PASS" starttime="20221118 09:17:46.387" endtime="20221118 09:17:46.397"/>
-</kw>
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<arg>kaja</arg>
-<arg>${countFood}</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20221118 09:17:46.397" level="INFO">Selecting options from selection list 'kaja' by value 2.</msg>
-<status status="PASS" starttime="20221118 09:17:46.397" endtime="20221118 09:17:46.518"/>
-</kw>
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<arg>pia</arg>
-<arg>${countDrink}</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20221118 09:17:46.519" level="INFO">Selecting options from selection list 'pia' by value 2.</msg>
-<status status="PASS" starttime="20221118 09:17:46.518" endtime="20221118 09:17:46.580"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[contains(@value,'Mehet!')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 09:17:46.581" level="INFO">Clicking element '//input[contains(@value,'Mehet!')]'.</msg>
-<status status="PASS" starttime="20221118 09:17:46.580" endtime="20221118 09:17:46.939"/>
-</kw>
-<status status="PASS" starttime="20221118 09:17:46.378" endtime="20221118 09:17:46.939"/>
-</branch>
-<status status="PASS" starttime="20221118 09:17:46.378" endtime="20221118 09:17:46.939"/>
-</if>
-<status status="PASS" starttime="20221118 09:17:46.302" endtime="20221118 09:17:46.939"/>
-</kw>
-<kw name="Learning" library="login_resources_TC1">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//a[@href='/tanit.pet']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 09:17:46.940" level="INFO">Clicking element '//a[@href='/tanit.pet']'.</msg>
-<status status="PASS" starttime="20221118 09:17:46.940" endtime="20221118 09:17:47.206"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${lessonPresent}</var>
-<arg>page should contain</arg>
-<arg>Válaszd ki, hogy mit tanuljon a tevéd:</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Válaszd ki, hogy mit tanuljon a tevéd:</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221118 09:17:47.485" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20221118 09:17:47.485" level="FAIL">Page should have contained text 'Válaszd ki, hogy mit tanuljon a tevéd:' but did not.</msg>
-<status status="FAIL" starttime="20221118 09:17:47.206" endtime="20221118 09:17:47.511"/>
-</kw>
-<msg timestamp="20221118 09:17:47.511" level="INFO">${lessonPresent} = False</msg>
-<status status="PASS" starttime="20221118 09:17:47.206" endtime="20221118 09:17:47.511"/>
-</kw>
-<if>
-<branch type="IF" condition="${lessonPresent}">
 <kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>xpath://*[@id="content ize"]/tbody/tr/td/table/tbody/tr[1]/td/font/b/div/form/div[1]/select</arg>
-<arg>0</arg>
+<arg>(//select[@class='match-result'])[3]</arg>
+<arg>3</arg>
 <doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<status status="NOT RUN" starttime="20221118 09:17:47.511" endtime="20221118 09:17:47.511"/>
+<msg timestamp="20221121 13:31:03.509" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[3]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:03.509" endtime="20221121 13:31:03.748"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//*[@id="content ize"]/tbody/tr/td/table/tbody/tr[1]/td/font/b/div/form/div[2]/input</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221118 09:17:47.511" endtime="20221118 09:17:47.511"/>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[4]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:03.749" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[4]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:03.748" endtime="20221121 13:31:03.947"/>
 </kw>
-<status status="NOT RUN" starttime="20221118 09:17:47.511" endtime="20221118 09:17:47.511"/>
-</branch>
-<branch type="ELSE">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[contains(@value,'Tanulj teve!')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 09:17:47.511" level="INFO">Clicking element '//input[contains(@value,'Tanulj teve!')]'.</msg>
-<status status="PASS" starttime="20221118 09:17:47.511" endtime="20221118 09:17:47.792"/>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[5]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:03.948" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[5]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:03.947" endtime="20221121 13:31:04.155"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//area[contains(@shape,'poly')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 09:17:47.793" level="INFO">Clicking element '//area[contains(@shape,'poly')]'.</msg>
-<status status="PASS" starttime="20221118 09:17:47.792" endtime="20221118 09:17:48.069"/>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[6]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:04.156" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[6]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:04.156" endtime="20221121 13:31:04.354"/>
 </kw>
-<status status="PASS" starttime="20221118 09:17:47.511" endtime="20221118 09:17:48.069"/>
-</branch>
-<status status="PASS" starttime="20221118 09:17:47.511" endtime="20221118 09:17:48.070"/>
-</if>
-<status status="PASS" starttime="20221118 09:17:46.939" endtime="20221118 09:17:48.070"/>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[7]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:04.355" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[7]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:04.354" endtime="20221121 13:31:04.548"/>
 </kw>
-<status status="PASS" starttime="20221118 09:17:46.302" endtime="20221118 09:17:48.070"/>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[8]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:04.549" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[8]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:04.548" endtime="20221121 13:31:04.743"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[9]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:04.744" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[9]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:04.744" endtime="20221121 13:31:04.945"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[10]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:04.947" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[10]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:04.946" endtime="20221121 13:31:05.149"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[11]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:05.150" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[11]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:05.149" endtime="20221121 13:31:05.354"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[12]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:05.355" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[12]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:05.354" endtime="20221121 13:31:05.551"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[13]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:05.552" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[13]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:05.552" endtime="20221121 13:31:05.750"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[14]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:05.751" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[14]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:05.751" endtime="20221121 13:31:05.958"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[15]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:05.960" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[15]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:05.959" endtime="20221121 13:31:06.173"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[16]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:06.174" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[16]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:06.174" endtime="20221121 13:31:06.375"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[17]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:06.376" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[17]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:06.376" endtime="20221121 13:31:06.579"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[18]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:06.580" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[18]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:06.580" endtime="20221121 13:31:06.783"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[19]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:06.784" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[19]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:06.784" endtime="20221121 13:31:06.993"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[20]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:06.994" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[20]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:06.994" endtime="20221121 13:31:07.201"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[21]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:07.201" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[21]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:07.201" endtime="20221121 13:31:07.404"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[22]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:07.405" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[22]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:07.405" endtime="20221121 13:31:07.619"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[23]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:07.620" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[23]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:07.619" endtime="20221121 13:31:07.837"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[24]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:07.838" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[24]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:07.838" endtime="20221121 13:31:08.048"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[25]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:08.049" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[25]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:08.049" endtime="20221121 13:31:08.255"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[26]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:08.255" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[26]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:08.255" endtime="20221121 13:31:08.452"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[27]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:08.453" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[27]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:08.453" endtime="20221121 13:31:08.659"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[28]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:08.660" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[28]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:08.659" endtime="20221121 13:31:08.871"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[29]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:08.872" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[29]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:08.871" endtime="20221121 13:31:09.080"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[30]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:09.081" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[30]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:09.080" endtime="20221121 13:31:09.287"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[31]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:09.288" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[31]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:09.288" endtime="20221121 13:31:09.497"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[32]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:09.498" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[32]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:09.498" endtime="20221121 13:31:09.714"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[33]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:09.715" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[33]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:09.714" endtime="20221121 13:31:09.926"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[34]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:09.927" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[34]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:09.927" endtime="20221121 13:31:10.143"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[35]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:10.144" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[35]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:10.143" endtime="20221121 13:31:10.358"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[36]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:10.358" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[36]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:10.358" endtime="20221121 13:31:10.564"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[37]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:10.564" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[37]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:10.564" endtime="20221121 13:31:10.780"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[38]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:10.781" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[38]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:10.780" endtime="20221121 13:31:10.991"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[39]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:10.992" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[39]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:10.991" endtime="20221121 13:31:11.200"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[40]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:11.201" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[40]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:11.201" endtime="20221121 13:31:11.415"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[41]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:11.416" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[41]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:11.416" endtime="20221121 13:31:11.630"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[42]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:11.631" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[42]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:11.630" endtime="20221121 13:31:11.841"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[43]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:11.842" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[43]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:11.842" endtime="20221121 13:31:12.057"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[44]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:12.058" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[44]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:12.058" endtime="20221121 13:31:12.270"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[45]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:12.271" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[45]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:12.271" endtime="20221121 13:31:12.475"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[46]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:12.475" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[46]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:12.475" endtime="20221121 13:31:12.695"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[47]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:12.696" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[47]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:12.696" endtime="20221121 13:31:12.909"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>(//select[@class='match-result'])[48]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221121 13:31:12.910" level="INFO">Selecting options from selection list '(//select[@class='match-result'])[48]' by index 3.</msg>
+<status status="PASS" starttime="20221121 13:31:12.909" endtime="20221121 13:31:13.114"/>
+</kw>
+<status status="PASS" starttime="20221121 13:31:00.416" endtime="20221121 13:31:13.115"/>
 </test>
-<kw name="Close Browsers" library="login_resources_TC1" type="TEARDOWN">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20221118 09:17:48.071" endtime="20221118 09:17:50.131"/>
-</kw>
-<status status="PASS" starttime="20221118 09:17:48.071" endtime="20221118 09:17:50.131"/>
-</kw>
-<status status="PASS" starttime="20221118 09:17:39.633" endtime="20221118 09:17:50.131"/>
+<status status="PASS" starttime="20221121 13:31:00.141" endtime="20221121 13:31:13.116"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="TC1">TC1</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="WC22">WC22</stat>
 </suite>
 </statistics>
 <errors>
