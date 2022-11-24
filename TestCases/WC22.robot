@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${browser}  chrome
-${url}  http://127.0.0.1:5500/index.html?
+${url}  http://127.0.0.1:5500/index.html
 
 *** Test Cases ***
 ANYAD

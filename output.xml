@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0 (Python 3.10.8 on win32)" generated="20221118 09:17:39.633" rpa="false" schemaversion="3">
-<suite id="s1" name="TC1" source="C:\Users\dhadjati\PycharmProjects\RobotFrameworkPractice\TestCases\TC1.robot">
+<robot generator="Robot 6.0 (Python 3.10.8 on win32)" generated="20221123 09:45:42.060" rpa="false" schemaversion="3">
+<suite id="s1" name="TC1" source="D:\Projects\Robotframework projects\RobotFrameworkPractice\TestCases\TC1.robot">
 <kw name="Open my Browser" library="login_resources_TC1" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221118 09:17:39.999" level="INFO">Opening browser 'headlesschrome' to base url 'https://teveclub.hu/'.</msg>
-<status status="PASS" starttime="20221118 09:17:39.999" endtime="20221118 09:17:45.006"/>
+<msg timestamp="20221123 09:45:42.555" level="INFO">Opening browser 'headlesschrome' to base url 'https://teveclub.hu/'.</msg>
+<status status="PASS" starttime="20221123 09:45:42.555" endtime="20221123 09:45:46.892"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221118 09:17:45.006" endtime="20221118 09:17:45.124"/>
+<status status="PASS" starttime="20221123 09:45:46.892" endtime="20221123 09:45:47.010"/>
 </kw>
-<status status="PASS" starttime="20221118 09:17:39.999" endtime="20221118 09:17:45.124"/>
+<status status="PASS" starttime="20221123 09:45:42.554" endtime="20221123 09:45:47.010"/>
 </kw>
 <test id="s1-t1" name="Teve visit" line="10">
 <kw name="LoginWithData">
@@ -26,27 +26,27 @@
 <arg>name:tevenev</arg>
 <arg>${appusername}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 09:17:45.126" level="INFO">Typing text 'Patás Nyunyu' into text field 'name:tevenev'.</msg>
-<status status="PASS" starttime="20221118 09:17:45.126" endtime="20221118 09:17:45.186"/>
+<msg timestamp="20221123 09:45:47.012" level="INFO">Typing text 'Patás Nyunyu' into text field 'name:tevenev'.</msg>
+<status status="PASS" starttime="20221123 09:45:47.011" endtime="20221123 09:45:47.055"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:pass</arg>
 <arg>${apppassword}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 09:17:45.186" level="INFO">Typing text 'gyereideakurvaanyad' into text field 'name:pass'.</msg>
-<status status="PASS" starttime="20221118 09:17:45.186" endtime="20221118 09:17:45.257"/>
+<msg timestamp="20221123 09:45:47.055" level="INFO">Typing text 'gyereideakurvaanyad' into text field 'name:pass'.</msg>
+<status status="PASS" starttime="20221123 09:45:47.055" endtime="20221123 09:45:47.105"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//input[contains(@type,'image')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 09:17:45.258" level="INFO">Clicking element '//input[contains(@type,'image')]'.</msg>
-<status status="PASS" starttime="20221118 09:17:45.257" endtime="20221118 09:17:46.300"/>
+<msg timestamp="20221123 09:45:47.106" level="INFO">Clicking element '//input[contains(@type,'image')]'.</msg>
+<status status="PASS" starttime="20221123 09:45:47.105" endtime="20221123 09:45:47.534"/>
 </kw>
-<status status="PASS" starttime="20221118 09:17:45.125" endtime="20221118 09:17:46.300"/>
+<status status="PASS" starttime="20221123 09:45:47.011" endtime="20221123 09:45:47.534"/>
 </kw>
-<status status="PASS" starttime="20221118 09:17:45.125" endtime="20221118 09:17:46.301"/>
+<status status="PASS" starttime="20221123 09:45:47.011" endtime="20221123 09:45:47.534"/>
 </kw>
-<status status="PASS" starttime="20221118 09:17:45.125" endtime="20221118 09:17:46.301"/>
+<status status="PASS" starttime="20221123 09:45:47.010" endtime="20221123 09:45:47.535"/>
 </test>
 <test id="s1-t2" name="TodoTest" line="14">
 <kw name="Feeding" library="login_resources_TC1">
@@ -58,19 +58,20 @@
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>//input[contains(@value,'Mehet!')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221118 09:17:46.372" level="INFO">Element '//input[contains(@value,'Mehet!')]' is displayed.</msg>
-<status status="PASS" starttime="20221118 09:17:46.303" endtime="20221118 09:17:46.372"/>
+<msg timestamp="20221123 09:45:47.687" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-35.png"&gt;&lt;img src="selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221123 09:45:47.688" level="FAIL">Element with locator '//input[contains(@value,'Mehet!')]' not found.</msg>
+<status status="FAIL" starttime="20221123 09:45:47.537" endtime="20221123 09:45:47.697"/>
 </kw>
-<msg timestamp="20221118 09:17:46.372" level="INFO">${feedable} = True</msg>
-<status status="PASS" starttime="20221118 09:17:46.303" endtime="20221118 09:17:46.372"/>
+<msg timestamp="20221123 09:45:47.697" level="INFO">${feedable} = False</msg>
+<status status="PASS" starttime="20221123 09:45:47.536" endtime="20221123 09:45:47.697"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>window.scrollTo(0,document.body.scrollHeight)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221118 09:17:46.373" level="INFO">Executing JavaScript:
+<msg timestamp="20221123 09:45:47.698" level="INFO">Executing JavaScript:
 window.scrollTo(0,document.body.scrollHeight)
 Without any arguments.</msg>
-<status status="PASS" starttime="20221118 09:17:46.372" endtime="20221118 09:17:46.377"/>
+<status status="PASS" starttime="20221123 09:45:47.698" endtime="20221123 09:45:47.701"/>
 </kw>
 <if>
 <branch type="IF" condition="${feedable}">
@@ -78,48 +79,43 @@ Without any arguments.</msg>
 <var>${countFood}</var>
 <arg>xpath://select[contains(@name,'kaja')]/option</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20221118 09:17:46.387" level="INFO">${countFood} = 2</msg>
-<status status="PASS" starttime="20221118 09:17:46.378" endtime="20221118 09:17:46.387"/>
+<status status="NOT RUN" starttime="20221123 09:45:47.702" endtime="20221123 09:45:47.702"/>
 </kw>
 <kw name="Get Element Count" library="SeleniumLibrary">
 <var>${countDrink}</var>
 <arg>xpath://select[contains(@name,'pia')]/option</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20221118 09:17:46.397" level="INFO">${countDrink} = 2</msg>
-<status status="PASS" starttime="20221118 09:17:46.387" endtime="20221118 09:17:46.397"/>
+<status status="NOT RUN" starttime="20221123 09:45:47.702" endtime="20221123 09:45:47.702"/>
 </kw>
 <kw name="Select From List By Value" library="SeleniumLibrary">
 <arg>kaja</arg>
 <arg>${countFood}</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20221118 09:17:46.397" level="INFO">Selecting options from selection list 'kaja' by value 2.</msg>
-<status status="PASS" starttime="20221118 09:17:46.397" endtime="20221118 09:17:46.518"/>
+<status status="NOT RUN" starttime="20221123 09:45:47.702" endtime="20221123 09:45:47.702"/>
 </kw>
 <kw name="Select From List By Value" library="SeleniumLibrary">
 <arg>pia</arg>
 <arg>${countDrink}</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20221118 09:17:46.519" level="INFO">Selecting options from selection list 'pia' by value 2.</msg>
-<status status="PASS" starttime="20221118 09:17:46.518" endtime="20221118 09:17:46.580"/>
+<status status="NOT RUN" starttime="20221123 09:45:47.702" endtime="20221123 09:45:47.702"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//input[contains(@value,'Mehet!')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 09:17:46.581" level="INFO">Clicking element '//input[contains(@value,'Mehet!')]'.</msg>
-<status status="PASS" starttime="20221118 09:17:46.580" endtime="20221118 09:17:46.939"/>
+<status status="NOT RUN" starttime="20221123 09:45:47.702" endtime="20221123 09:45:47.702"/>
 </kw>
-<status status="PASS" starttime="20221118 09:17:46.378" endtime="20221118 09:17:46.939"/>
+<status status="NOT RUN" starttime="20221123 09:45:47.702" endtime="20221123 09:45:47.702"/>
 </branch>
-<status status="PASS" starttime="20221118 09:17:46.378" endtime="20221118 09:17:46.939"/>
+<status status="PASS" starttime="20221123 09:45:47.701" endtime="20221123 09:45:47.702"/>
 </if>
-<status status="PASS" starttime="20221118 09:17:46.302" endtime="20221118 09:17:46.939"/>
+<status status="PASS" starttime="20221123 09:45:47.536" endtime="20221123 09:45:47.702"/>
 </kw>
 <kw name="Learning" library="login_resources_TC1">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//a[@href='/tanit.pet']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 09:17:46.940" level="INFO">Clicking element '//a[@href='/tanit.pet']'.</msg>
-<status status="PASS" starttime="20221118 09:17:46.940" endtime="20221118 09:17:47.206"/>
+<msg timestamp="20221123 09:45:47.703" level="INFO">Clicking element '//a[@href='/tanit.pet']'.</msg>
+<status status="PASS" starttime="20221123 09:45:47.703" endtime="20221123 09:45:47.940"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${lessonPresent}</var>
@@ -129,12 +125,12 @@ Without any arguments.</msg>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Válaszd ki, hogy mit tanuljon a tevéd:</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221118 09:17:47.485" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20221118 09:17:47.485" level="FAIL">Page should have contained text 'Válaszd ki, hogy mit tanuljon a tevéd:' but did not.</msg>
-<status status="FAIL" starttime="20221118 09:17:47.206" endtime="20221118 09:17:47.511"/>
+<msg timestamp="20221123 09:45:48.142" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-36.png"&gt;&lt;img src="selenium-screenshot-36.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221123 09:45:48.143" level="FAIL">Page should have contained text 'Válaszd ki, hogy mit tanuljon a tevéd:' but did not.</msg>
+<status status="FAIL" starttime="20221123 09:45:47.940" endtime="20221123 09:45:48.143"/>
 </kw>
-<msg timestamp="20221118 09:17:47.511" level="INFO">${lessonPresent} = False</msg>
-<status status="PASS" starttime="20221118 09:17:47.206" endtime="20221118 09:17:47.511"/>
+<msg timestamp="20221123 09:45:48.143" level="INFO">${lessonPresent} = False</msg>
+<status status="PASS" starttime="20221123 09:45:47.940" endtime="20221123 09:45:48.143"/>
 </kw>
 <if>
 <branch type="IF" condition="${lessonPresent}">
@@ -142,44 +138,44 @@ Without any arguments.</msg>
 <arg>xpath://*[@id="content ize"]/tbody/tr/td/table/tbody/tr[1]/td/font/b/div/form/div[1]/select</arg>
 <arg>0</arg>
 <doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<status status="NOT RUN" starttime="20221118 09:17:47.511" endtime="20221118 09:17:47.511"/>
+<status status="NOT RUN" starttime="20221123 09:45:48.143" endtime="20221123 09:45:48.143"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="content ize"]/tbody/tr/td/table/tbody/tr[1]/td/font/b/div/form/div[2]/input</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221118 09:17:47.511" endtime="20221118 09:17:47.511"/>
+<status status="NOT RUN" starttime="20221123 09:45:48.143" endtime="20221123 09:45:48.143"/>
 </kw>
-<status status="NOT RUN" starttime="20221118 09:17:47.511" endtime="20221118 09:17:47.511"/>
+<status status="NOT RUN" starttime="20221123 09:45:48.143" endtime="20221123 09:45:48.143"/>
 </branch>
 <branch type="ELSE">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//input[contains(@value,'Tanulj teve!')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 09:17:47.511" level="INFO">Clicking element '//input[contains(@value,'Tanulj teve!')]'.</msg>
-<status status="PASS" starttime="20221118 09:17:47.511" endtime="20221118 09:17:47.792"/>
+<msg timestamp="20221123 09:45:48.144" level="INFO">Clicking element '//input[contains(@value,'Tanulj teve!')]'.</msg>
+<status status="PASS" starttime="20221123 09:45:48.143" endtime="20221123 09:45:48.340"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//area[contains(@shape,'poly')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 09:17:47.793" level="INFO">Clicking element '//area[contains(@shape,'poly')]'.</msg>
-<status status="PASS" starttime="20221118 09:17:47.792" endtime="20221118 09:17:48.069"/>
+<msg timestamp="20221123 09:45:48.341" level="INFO">Clicking element '//area[contains(@shape,'poly')]'.</msg>
+<status status="PASS" starttime="20221123 09:45:48.341" endtime="20221123 09:45:48.531"/>
 </kw>
-<status status="PASS" starttime="20221118 09:17:47.511" endtime="20221118 09:17:48.069"/>
+<status status="PASS" starttime="20221123 09:45:48.143" endtime="20221123 09:45:48.531"/>
 </branch>
-<status status="PASS" starttime="20221118 09:17:47.511" endtime="20221118 09:17:48.070"/>
+<status status="PASS" starttime="20221123 09:45:48.143" endtime="20221123 09:45:48.531"/>
 </if>
-<status status="PASS" starttime="20221118 09:17:46.939" endtime="20221118 09:17:48.070"/>
+<status status="PASS" starttime="20221123 09:45:47.703" endtime="20221123 09:45:48.531"/>
 </kw>
-<status status="PASS" starttime="20221118 09:17:46.302" endtime="20221118 09:17:48.070"/>
+<status status="PASS" starttime="20221123 09:45:47.536" endtime="20221123 09:45:48.532"/>
 </test>
 <kw name="Close Browsers" library="login_resources_TC1" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20221118 09:17:48.071" endtime="20221118 09:17:50.131"/>
+<status status="PASS" starttime="20221123 09:45:48.533" endtime="20221123 09:45:50.587"/>
 </kw>
-<status status="PASS" starttime="20221118 09:17:48.071" endtime="20221118 09:17:50.131"/>
+<status status="PASS" starttime="20221123 09:45:48.533" endtime="20221123 09:45:50.587"/>
 </kw>
-<status status="PASS" starttime="20221118 09:17:39.633" endtime="20221118 09:17:50.131"/>
+<status status="PASS" starttime="20221123 09:45:42.062" endtime="20221123 09:45:50.587"/>
 </suite>
 <statistics>
 <total>
